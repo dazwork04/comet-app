@@ -1,3 +1,5 @@
+
+import 'react-native-gesture-handler';
 import { Assets as NavigationAssets } from '@react-navigation/elements';
 import { Asset } from 'expo-asset';
 import * as SplashScreen from 'expo-splash-screen';
