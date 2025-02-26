@@ -7,9 +7,10 @@ type Props = StaticScreenProps<{
 }>;
 
 export function Profile({ route }: Props) {
+  const { user } = route.params;
   return (
     <View style={styles.container}>
-      <Text>{route.params.user}'s Profile</Text>
+      <Text>{user}'s Profile</Text>
     </View>
   );
 }
