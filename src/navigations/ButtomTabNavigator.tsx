@@ -1,4 +1,4 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { BottomTabNavigationOptions, createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Extra } from "./screens/Extra";
 import { Home } from "./screens/Home";
 import { Updates } from "./screens/Updates";
@@ -11,7 +11,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 const HomeTabs = createBottomTabNavigator();
 
-const screenOptions = {
+const screenOptions: BottomTabNavigationOptions = {
   tabBarActiveTintColor: 'tomato',
 }
 
