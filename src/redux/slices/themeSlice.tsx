@@ -1,11 +1,13 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { isSystemThemeDark } from '../../utils/constants';
 
 const themeSlice = createSlice({
   name: 'theme',
-  initialState: { isThemeDark: false },
+  initialState: { isThemeDark: isSystemThemeDark },
   reducers: {
-    toggleTheme: (state) => {
-      state.isThemeDark = !state.isThemeDark;
+    toggleTheme: (state, action: PayloadAction<boolean | undefined>) => {
+      // If payload is provided, use it. Otherwise, just toggle.
+      state.isThemeDark = action.payload ?? !state.isThemeDark;
     },
   },
 });
